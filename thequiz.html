@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Political Compass Project</title>
+        <link rel='shortcut icon' type='image/x-icon' href='icon.ico' />
+    </head>
+
+
+
+    <style>
+
+        @font-face
+        {
+                font-family: "Lora";
+                src: url('Lora-Regular.ttf'),
+                url('Lora-Regular.ttf'); /* IE */
+        }
+        @font-face
+        {
+            font-family: "Lato";
+            src: url('Lato-Regular.ttf'),
+            url('Lato-Regular.ttf'); /* IE */
+        }
+        @font-face
+        {
+            font-family: "Opensans";
+            src: url('OpenSans-Regular.ttf'),
+            url('OpenSans-Regular.ttf'); /* IE */
+        }
+        @font-face
+        {
+            font-family: "Raleway";
+            src: url('Raleway-Regular.ttf'),
+            url('Raleway-Regular.ttf'); /* IE */
+        }
+        @font-face
+        {
+            font-family: "Slabo";
+            src: url('Slabo27px-Regular.ttf'),
+            url('Slabo27px-Regular.ttf'); /* IE */
+        }
+
+
+        body {
+            background-image: url("stardust.png");
+        }
+        #main {
+            background-image: url("greyzz.png");
+            margin: auto;
+            height: 95%;
+            width: 130vh;
+            border-radius: 7px;
+            box-shadow: 8px 10px 4px #262626;
+        }
+
+        h4 {
+            font-size: 15px;
+            font-family: Opensans;
+            margin-left: 20px;
+            padding-top: 10px;
+        }
+
+        .questions {
+            margin-left: 40px;
+            font-family: "Raleway";
+            padding-bottom: 15px;
+        }
+
+        #submit{
+            margin-top: 20px;
+            margin-left: 50px;
+            font-size: 20px;
+            font-family: "Lato";
+        }
+        #marxism{
+            text-decoration: underline;
+            color: dodgerblue;
+        }
+
+        #marxism:hover{
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+    </style>
+
+    <body>
+        <div id="main">
+            <!-- You already knows what goes here. !-->
+           <h4> We will now run you through three pages of questions, each with their own theme. This one judges your economic standpoint.  </h4>
+
+        <div class="questions" id="que1">
+        <p>Tax: Taxpayers should...</p>
+        <select id="selector1">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>be able to choose where all their taxes are directed</option>
+        <option value=0>be able to choose where half their taxes are directed</option>
+        <option value=-8.666>not be able to where their dollars are directed</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que2">
+        <p>Tax: Income Tax should...</p>
+        <select id="selector2">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>exist at a flat rate</option>
+        <option value=-8.666>exist at a progressive rate</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que3">
+        <p>Tax: Property Tax should...</p>
+        <select id="selector3">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>exist at a flat rate per property</option>
+        <option value=-8.666>exist at a progressive rate per property</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que4">
+        <p>Tax: Inheritance Tax should...</p>
+        <select id="selector4">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>exist at a flat rate</option>
+        <option value=-8.666>exist at a progressive rate</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que5">
+        <p>Tax: Unspent-Wealth/Hoarding Tax should...</p>
+        <select id="selector5">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>exist at a flat rate</option>
+        <option value=-8.666>exist at a progressive rate</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que6">
+        <p>Services: Publicly funded healthcare should...</p>
+        <select id="selector6">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>exist, but have private alternatives</option>
+        <option value=-8.666>exist as the only form of healthcare</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que7">
+        <p>Services: Publicly funded education should...</p>
+        <select id="selector7">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>exist up to highschool only</option>
+        <option value=-8.666>exist for both school and post secondary education</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que8">
+        <p>Services: Publicly funded housing should...</p>
+        <select id="selector8">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>exist in small quantities to provide for the homeless population</option>
+        <option value=-8.666>exist in large quantities as a human right for all citizens</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que9">
+        <p>Services: Scientific research should be...</p>
+        <select id="selector9">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>left to the market</option>
+        <option value=0>publicly funded, but only for research that has direct practical use</option>
+        <option value=-8.666>publicly funded</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que10">
+        <p>Services: Cultural projects (monuments, parks, museams, zoos, festivals, churches) should be...</p>
+        <select id="selector10">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>left to the market</option>
+        <option value=0>publicly funded, but only for regions where they could not survive on a commercial basis</option>
+        <option value=-8.666>publicly funded</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que11">
+        <p>Income: Minimum wage should be...</p>
+        <select id="selector11">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>zero</option>
+        <option value=0>high enough to surpass the global slavery standard</option>
+        <option value=-8.666>high enough for a full time worker to sustain themselves</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que12">
+        <p>Income: Regarding able-bodied adults without kids, welfare should be given to...</p>
+        <select id="selector12">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>nobody</option>
+        <option value=0>people who have recently become unemployed and are in the market for new job </option>
+        <option value=-8.666>anybody who is unemployed</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que13">
+        <p>Income: Passive Income generated by rent and stock ownership should be...</p>
+        <select id="selector13">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>unregulated</option>
+        <option value=0>taxed</option>
+        <option value=-8.666>illegal</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que14">
+        <p>Income: Price gouging should be...</p>
+        <select id="selector14">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>legal</option>
+        <option value=0>legal for recreational products (ie tickets), illegal for essentials (ie toiletpaper and medicine)</option>
+        <option value=-8.666>illegal</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que15">
+        <p>Income: The official state currency should be...</p>
+        <select id="selector15">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>Non Existant: people should barter with private currencies</option>
+        <option value=0>Fixed: money has a fixed value and cannot be printed</option>
+        <option value=-8.666>Flexible: money can be printed to provide loans, but is subject to inflation</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que16">
+        <p>Income: Moneyhandlers such as banks and insurance companies should...</p>
+        <select id="selector16">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>be privatized and unregulated</option>
+        <option value=0>be privatized but regulated by a federal reserve</option>
+        <option value=-8.666>be nationalized, recieving fixed income and operating for nonprofit</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que17">
+        <p>Employment: If an Employer wants to hire, fire, demote, or promote an employee, they should...</p>
+        <select id="selector17">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not require legal justification</option>
+        <option value=0>require legal justification at public institutions, but not private ones</option>
+        <option value=-8.666>should require legal justification</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que18">
+        <p>Employment: If a manager wants to deny a customer service or charge extra, they should...</p>
+        <select id="selector18">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not require legal justification</option>
+        <option value=0>require legal justification at public institutions, but not private ones</option>
+        <option value=-8.666>should require legal justification</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que19">
+        <p>Employment: If a 12 year old is able to work and willing to work, they should be...</p>
+        <select id="selector19">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>allowed</option>
+        <option value=0>allowed, as long as their hours are limited enough to pursue education on the side</option>
+        <option value=-8.666>not allowed</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que20">
+        <p>Employment: If a union of workers go on strike, they should be...</p>
+        <select id="selector20">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>immediately eligable for firing</option>
+        <option value=0>protected by law for a limited duration</option>
+        <option value=-8.666>protected by law for the duration of their strike</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que21">
+        <p>Employment: Working conditions should be determined by...</p>
+        <select id="selector21">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>whatever the employer and worker agreed to</option>
+        <option value=0>a minimum safety/ethics standard upheld by public authority</option>
+        <option value=-8.666>a democrat vote amongst the workers themselves</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que22">
+        <p>Market: Newly manufactured cars that do not uphold modern industry standards or safety features should be...</p>
+        <select id="selector22">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>unregulated</option>
+        <option value=0>taxed</option>
+        <option value=-8.666>illegal</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que23">
+        <p>Trade: Businesses operating abroad from their country of origin should...</p>
+        <select id="selector23">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>only pay the tax rate of where they are operating</option>
+        <option value=0>pay taxes to their area of operations, as well as to their homeland</option>
+        <option value=-8.666>pay taxes to their area of operations, as well as an inflated tax their homeland</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que24">
+        <p>Trade: Businesses operating abroad from their country of origin should...</p>
+        <select id="selector24">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not be limited in the amount of jobs they offshore to other countries</option>
+        <option value=0>be taxed beyond a certain threshold of offshored jobs</option>
+        <option value=-8.666>be directly limited in the amount of jobs they offshore</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que25">
+        <p>Trade: International trade should be banned from...</p>
+        <select id="selector25">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>no nation</option>
+        <option value=0>any nation we are at conflict with</option>
+        <option value=-8.666>any nation that opposes us enough politically</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que26">
+        <p>Trade: Imports should be...</p>
+        <select id="selector26">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>never taxed</option>
+        <option value=0>taxed depending on the country and state of the global economy</option>
+        <option value=-8.666>always taxed</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que27">
+        <p>Externalities: Intellectual property protection should...</p>
+        <select id="selector27">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>exist for creative properties such as scripts, art, and music</option>
+        <option value=-8.666>exist for practical properties such as product blueprints and design concepts</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que28">
+        <p>Externalities: Air pollution and nonrenewable energy sources should be...</p>
+        <select id="selector28">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>unregulated</option>
+        <option value=0>taxed</option>
+        <option value=-8.666>banned</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que29">
+        <p>Externalities: Zoning laws should...</p>
+        <select id="selector29">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>not exist</option>
+        <option value=0>be used so that all structures follow community guidelines</option>
+        <option value=-8.666>be used so that all structures are designed around a central community plan</option>
+        </select>
+        </div>
+
+        <div class="questions" id="que30">
+        <p>Externalities: Advertisements should be...</p>
+        <select id="selector30">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value=8.666>unregulated</option>
+        <option value=0>require a peer review before airing</option>
+        <option value=-8.666>be reformed to reduce consumer culture as a whole</option>
+        </select>
+        </div>
+
+
+
+            <a href="thequizparttwo.html"><button id="submit">Submit</button></a>
+
+
+        </div>
+    </body>
+
+      <script>
+        window.onload = start;
+        document.getElementById("submit").onclick = ulclick;
+        document.getElementById("marxism").onclick = alertClick;
+
+
+
+
+
+
+        function start()
+        {
+            //This is where you call functions and put general document editing code.
+            //var select = document.getElementById("selector1");
+            //alert ( select.options[select.selectedIndex].value)
+
+            createPara("", "p1")
+        }
+
+        function alertClick()
+          {
+              alert("Communism in this context being the concept of a classless, stateless and moneyless society.")
+          }
+
+         function createPara(text, id)
+                //Very imporant function to reduce time wasted making paragraphs manually!
+            {
+                var para = document.createElement("p");
+                var t = document.createTextNode(text);
+                para.appendChild(t);
+                document.getElementById("main").appendChild(para);
+                para.id = id;
+            }
+
+        function ulclick()
+          {
+              var scoreLeft = calculate();
+
+              sessionStorage.setItem('scoreLeft', scoreLeft)
+
+
+          }
+        function calculate()
+        {
+
+            var select = document.getElementById("selector1");
+            var select2 = document.getElementById("selector2");
+            var select3 = document.getElementById("selector3");
+            var select4 = document.getElementById("selector4");
+            var select5 = document.getElementById("selector5");
+            var select6 = document.getElementById("selector6");
+            var select7 = document.getElementById("selector7");
+            var select8 = document.getElementById("selector8");
+            var select9 = document.getElementById("selector9");
+            var select10 = document.getElementById("selector10");
+            var select11 = document.getElementById("selector11");
+            var select12 = document.getElementById("selector12");
+            var select13 = document.getElementById("selector13");
+            var select14 = document.getElementById("selector14");
+            var select15 = document.getElementById("selector15");
+            var select16 = document.getElementById("selector16");
+            var select17 = document.getElementById("selector17");
+            var select18 = document.getElementById("selector18");
+            var select19 = document.getElementById("selector19");
+            var select20 = document.getElementById("selector20");
+            var select21 = document.getElementById("selector21");
+            var select22 = document.getElementById("selector22");
+            var select23 = document.getElementById("selector23");
+            var select24 = document.getElementById("selector24");
+            var select25 = document.getElementById("selector25");
+            var select26 = document.getElementById("selector26");
+            var select27 = document.getElementById("selector27");
+            var select28 = document.getElementById("selector28");
+            var select29 = document.getElementById("selector29");
+            var select30 = document.getElementById("selector30");
+
+           return parseFloat(select.options[select.selectedIndex].value)
+           + parseFloat(select2.options[select2.selectedIndex].value)
+           + parseFloat(select3.options[select3.selectedIndex].value)
+           + parseFloat(select4.options[select4.selectedIndex].value)
+           + parseFloat(select5.options[select5.selectedIndex].value)
+           + parseFloat(select6.options[select6.selectedIndex].value)
+           + parseFloat(select7.options[select7.selectedIndex].value)
+           + parseFloat(select8.options[select8.selectedIndex].value)
+           + parseFloat(select9.options[select9.selectedIndex].value)
+           + parseFloat(select10.options[select10.selectedIndex].value)
+           + parseFloat(select11.options[select11.selectedIndex].value)
+           + parseFloat(select12.options[select12.selectedIndex].value)
+           + parseFloat(select13.options[select13.selectedIndex].value)
+           + parseFloat(select14.options[select14.selectedIndex].value)
+           + parseFloat(select15.options[select15.selectedIndex].value)
+           + parseFloat(select16.options[select16.selectedIndex].value)
+           + parseFloat(select17.options[select17.selectedIndex].value)
+           + parseFloat(select18.options[select18.selectedIndex].value)
+           + parseFloat(select19.options[select19.selectedIndex].value)
+           + parseFloat(select20.options[select20.selectedIndex].value)
+           + parseFloat(select21.options[select21.selectedIndex].value)
+           + parseFloat(select22.options[select22.selectedIndex].value)
+           + parseFloat(select23.options[select23.selectedIndex].value)
+           + parseFloat(select24.options[select24.selectedIndex].value)
+           + parseFloat(select25.options[select25.selectedIndex].value)
+           + parseFloat(select26.options[select26.selectedIndex].value)
+           + parseFloat(select27.options[select27.selectedIndex].value)
+           + parseFloat(select28.options[select28.selectedIndex].value)
+           + parseFloat(select29.options[select29.selectedIndex].value)
+           + parseFloat(select30.options[select30.selectedIndex].value);
+
+
+        };
+
+
+
+
+
+        //The rest of the functions go here
+    </script>
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101050272); }catch(e){}</script>
+
+</html>
+
+<!-- I love IT! !-->

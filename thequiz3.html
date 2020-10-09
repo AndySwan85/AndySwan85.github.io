@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Political Compass Project</title>
+        <link rel='shortcut icon' type='image/x-icon' href='icon.ico' />
+    </head>
+
+
+
+    <style>
+
+        @font-face
+        {
+                font-family: "Lora";
+                src: url('Lora-Regular.ttf'),
+                url('Lora-Regular.ttf'); /* IE */
+        }
+        @font-face
+        {
+            font-family: "Lato";
+            src: url('Lato-Regular.ttf'),
+            url('Lato-Regular.ttf'); /* IE */
+        }
+        @font-face
+        {
+            font-family: "Opensans";
+            src: url('OpenSans-Regular.ttf'),
+            url('OpenSans-Regular.ttf'); /* IE */
+        }
+        @font-face
+        {
+            font-family: "Raleway";
+            src: url('Raleway-Regular.ttf'),
+            url('Raleway-Regular.ttf'); /* IE */
+        }
+        @font-face
+        {
+            font-family: "Slabo";
+            src: url('Slabo27px-Regular.ttf'),
+            url('Slabo27px-Regular.ttf'); /* IE */
+        }
+
+
+        body {
+            background-image: url("stardust.png");
+        }
+        #main {
+            background-image: url("greyzz.png");
+            margin: auto;
+            height: 95%;
+            width: 130vh;
+            border-radius: 7px;
+            box-shadow: 8px 10px 4px #262626;
+        }
+
+        h4 {
+            font-size: 15px;
+            font-family: Opensans;
+            margin-left: 20px;
+            padding-top: 10px;
+        }
+
+        .questions {
+            margin-left: 40px;
+            font-family: "Raleway";
+            padding-bottom: 15px;
+        }
+
+        #submit{
+            margin-top: 20px;
+            margin-left: 50px;
+            font-size: 20px;
+            font-family: "Lato";
+        }
+
+
+
+    </style>
+
+    <body>
+        <div id="main">
+            <!-- You already knows what goes here. !-->
+           <h4> This part is short. Here we simply ask for your stance on political systems </h4>
+
+        <div class="questions" id="que1">
+        <p>Your preferred governing system is...</p>
+        <select id="selector1">
+        <option selected="selected" value="0">[No opinion either way]</option>
+        <option value="N/A">Anarchy: Nobody makes policies</option>
+        <option value=259>Direct Democracy: All policies are made by public vote</option>
+        <option value=130>Representative Democracy: Policymakers are elected by public vote</option>
+        <option value=0>Weighted Democracy: Policymakers are elected by weighted vote, with higher quality citizens having greater vote weight</option>
+        <option value=-130>Technocracy/Bureaucracy/Theocracy: Policymakers are nominated by professional experts in technological, political, and social fields</option>
+        <option value=-259>Autocracy: Policymakers inherit their power through bloodline, algorithm, or by the will of their predecessor</option>
+        </select>
+        </div>
+
+
+
+            <a href="results.html"><button id="submit">Submit</button></a>
+
+
+        </div>
+    </body>
+
+      <script>
+        window.onload = start;
+        document.getElementById("submit").onclick = click;
+
+
+        function start()
+        {
+            //This is where you call functions and put general document editing code.
+            //var select = document.getElementById("selector1");
+            //alert ( select.options[select.selectedIndex].value)
+
+            createPara("", "p1")
+        }
+
+         function createPara(text, id)
+                //Very imporant function to reduce time wasted making paragraphs manually!
+            {
+                var para = document.createElement("p");
+                var t = document.createTextNode(text);
+                para.appendChild(t);
+                document.getElementById("main").appendChild(para);
+                para.id = id;
+            }
+
+        function click()
+          {
+            var scoreGood = calculate();
+
+            sessionStorage.setItem('scoreGood', scoreGood);
+          }
+        function calculate()
+        {
+            var select = document.getElementById("selector1");
+
+           return parseFloat(select.options[select.selectedIndex].value)
+        }
+
+
+
+        //The rest of the functions go here
+    </script>
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(101050272); }catch(e){}</script>
+</html>
+
+<!-- I love IT! !-->
